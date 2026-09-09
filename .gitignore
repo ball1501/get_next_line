@@ -1,1 +1,5 @@
 *.pdf
+*.o
+*.a
+tester/
+.DS_Store
