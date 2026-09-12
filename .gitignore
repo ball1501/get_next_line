@@ -3,3 +3,4 @@
 *.a
 tester/
 .DS_Store
+gnl_tester/
