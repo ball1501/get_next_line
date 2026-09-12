@@ -6,3 +6,4 @@ tester/
 main*
 *.txt
 test*
+test_results.log
