@@ -6,11 +6,11 @@
 /*   By: wngamkri <wngamkri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/12 10:44:21 by wngamkri          #+#    #+#             */
-/*   Updated: 2026/09/12 10:44:22 by wngamkri         ###   ########.fr       */
+/*   Updated: 2026/09/12 11:14:19 by wngamkri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 size_t	ft_strlen(const char *s)
 {

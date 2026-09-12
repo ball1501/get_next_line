@@ -3,4 +3,6 @@
 *.a
 tester/
 .DS_Store
-gnl_tester/
+main*
+*.txt
+test*

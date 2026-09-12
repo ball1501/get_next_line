@@ -6,7 +6,7 @@
 /*   By: wngamkri <wngamkri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/09 08:22:02 by wngamkri          #+#    #+#             */
-/*   Updated: 2026/09/09 08:33:29 by wngamkri         ###   ########.fr       */
+/*   Updated: 2026/09/12 12:49:11 by wngamkri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ size_t	ft_strlen(const char *s)
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
+	size_t	i;
 
 	if (!s)
 		return (NULL);

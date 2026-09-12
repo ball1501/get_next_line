@@ -6,7 +6,7 @@
 /*   By: wngamkri <wngamkri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/12 10:11:39 by wngamkri          #+#    #+#             */
-/*   Updated: 2026/09/12 10:16:29 by wngamkri         ###   ########.fr       */
+/*   Updated: 2026/09/12 12:31:45 by wngamkri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # endif
 
 char	*get_next_line(int fd);
+
 size_t	ft_strlen(const char *s);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strjoin(char *s1, char *s2);
