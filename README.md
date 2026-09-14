@@ -33,7 +33,7 @@ char	*get_next_line(int fd);
 Clone the repository and enter the project directory:
 
 ```bash
-git clone https://github.com/ball1501/get_next_line.git
+git clone <repository-url>
 cd get_next_line
 ```
 
@@ -156,7 +156,7 @@ By reading only `BUFFER_SIZE` bytes at a time:
 * Memory usage is reduced.
 * Large files can be processed without loading everything into memory.
 * The function can stop reading as soon as a complete line is available.
-* Data that belongs to the next line can be preserved for the next function call.
+* Data that belongs to the next line can be preserved for the next call.
 
 The use of a static variable is particularly important because local variables are destroyed when the function returns. A static variable allows the unread portion of the data to remain available between calls.
 
@@ -241,9 +241,7 @@ This is the key mechanism that allows `get_next_line()` to remember its position
 
 The exact complexity depends on the implementation and how strings are concatenated.
 
-In the typical implementation, data may need to be copied when buffers are joined or when a line is extracted.
-
-For a line of length `n`, the total processing can therefore reach **O(n)** for the line itself, while repeated string concatenation can introduce additional copying overhead depending on the implementation.
+For a line of length `n`, the total processing can reach **O(n)** for the line itself, while repeated string concatenation can introduce additional copying overhead depending on the implementation.
 
 The additional memory required is proportional to the amount of unread data that must be stored.
 
@@ -336,6 +334,18 @@ For the bonus version, multiple file descriptors should also be handled independ
 
 ---
 
+## Testing
+
+The implementation can be tested by comparing its output and behavior with the expected results from the `get_next_line` subject.
+
+For automated testing, the **[Tripouille/gnlTester](https://github.com/Tripouille/gnlTester)** repository can be used to test the implementation against a variety of cases, including different `BUFFER_SIZE` values, file contents, line lengths, and edge cases.
+
+After cloning the tester, place or link the project files according to the tester's instructions and run the provided test script.
+
+The tester can be used to verify both the mandatory and bonus implementations.
+
+---
+
 ## Resources
 
 ### Documentation
@@ -366,22 +376,24 @@ The following resources were used to understand the concepts required for this p
 * C documentation for static variables
 * Tutorials and references about file descriptors
 * Tutorials about string manipulation and memory management in C
+* Tripouille/gnlTester for testing the implementation
 
 ### AI Usage
 
 AI tools were used as a learning and debugging aid during the development of this project.
 
-They were used for tasks such as:
+They were mainly used to:
 
-* Explaining C concepts that were unclear during implementation.
-* Helping understand file descriptors and the `read()` system call.
-* Explaining how static variables can preserve data between function calls.
-* Analyzing compiler errors and tester failures.
-* Reviewing implementation logic and identifying potential edge cases.
-* Explaining memory management and possible memory leaks.
-* Suggesting ways to simplify or improve code while keeping the implementation understandable.
+* Understand how `read()` and file descriptors work.
+* Understand how static variables preserve data between function calls.
+* Clarify buffer management and line extraction logic.
+* Analyze implementation logic when the program did not behave as expected.
+* Analyze compiler errors and tester results.
+* Identify possible edge cases, including files without a final newline and different `BUFFER_SIZE` values.
+* Review memory management, including `malloc()`, `free()`, and potential memory leaks.
+* Understand and review the approach used to support multiple file descriptors in the bonus part.
 
-The project code was implemented and reviewed by the student. AI was used as a supplementary learning and debugging tool rather than as a replacement for understanding or implementing the project.
+AI was used as a supplementary learning and debugging tool. The implementation was written and reviewed by the student, with the goal of understanding the concepts and reasoning behind the code rather than relying on AI to implement the project.
 
 ---
 
