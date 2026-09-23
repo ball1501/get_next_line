@@ -33,7 +33,7 @@ char	*get_next_line(int fd);
 Clone the repository and enter the project directory:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/ball1501/get_next_line.git
 cd get_next_line
 ```
 
