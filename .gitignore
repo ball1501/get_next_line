@@ -8,3 +8,4 @@ main*
 test*
 test_results.log
 gnlTester/
+gnl_tester/
