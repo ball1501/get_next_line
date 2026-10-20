@@ -1,6 +1,7 @@
 *.pdf
 *.o
 *.a
+a.out
 tester/
 .DS_Store
 main*
@@ -9,3 +10,4 @@ test*
 test_results.log
 gnlTester/
 gnl_tester/
+*.pch
